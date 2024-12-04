@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="paint.css">
+</head>
+<body>
+<div class="window">
+    <h1>Connected to 0.0.0.0</h1>
+    <table cellspacing="0" cellpadding="0" border-collapse="collapse">
+        <tbody></tbody>
+    </table>
+    <div id="palette">
+        <ul>
+            <li class="selected" style="background:#000000;"></li>
+            <li style="background:#7c7c7c;"></li>
+            <li style="background:#ffffff;"></li>
+            <li style="background:#bfff3c;"></li>
+            <li style="background:#4be728;"></li>
+            <li style="background:#04a85d;"></li>
+            <li style="background:#007899;"></li>
+            <li style="background:#002859;"></li>
+            <li style="background:#68aed4;"></li>
+            <br>
+            <li style="background:#542912;"></li>
+            <li style="background:#7f0622;"></li>
+            <li style="background:#d62411;"></li>
+            <li style="background:#ff8426;"></li>
+            <li style="background:#ffd100;"></li>
+            <li style="background:#ff80a4;"></li>
+            <li style="background:#ff2674;"></li>
+            <li style="background:#94216a;"></li>
+            <li style="background:#430067;"></li>
+        </ul>
+
+        <input type="color" id="custom" name="custom" value="#ff0000">
+    </div>
+    <ul class="tools">
+        <li data-tool="paint" title="Paint" class="paint selected"><span class="fa fa-pencil"></span></li>
+        <li data-tool="fill" title="Fill" class="fill"><span class="fa fa-bitbucket"></span></li>
+        <li data-tool="erase" title="Erase" class="erase"><span class="fa fa-eraser"></span></li>
+        <li data-tool="pick" title="Dropper" class="pick"><span class="fa fa-eyedropper"></span></li>
+        <li data-tool="lighten" title="Lighten" class="lighten"><span class="fa fa-sun-o"></span></li>
+        <li data-tool="darken" title="Darken" class="darken"><span class="fa fa-adjust"></span></li>
+        <li data-tool="trash" title="Clear" class="trash"><span class="fa fa-trash"></span></li>
+        <li data-tool="save" title="Save" class="save"><span class="fa fa-save"></span></li>
+    </ul>
+</div>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+<script type="text/javascript" src="tinycolor.js"></script>
+<script type="text/javascript" src="paint.js"></script>
+</body>
+</html>
