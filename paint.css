@@ -1,3 +1,7 @@
+:root {
+    --selected-color: #FFD100;
+}
+
 body {
     background: #ffffff;
     font-family: Arial, Verdana, Sans-Serif, serif;
@@ -123,6 +127,8 @@ h1 {
     line-height:40px;
     font-weight:normal;
     font-size:24px;
+    text-transform: lowercase;
+    font-style: italic;
 }
 
 table {
@@ -137,6 +143,9 @@ table td {
     width:14px;
     height:14px;
     border:1px solid #333;
+}
+table td:hover {
+    border-color: var(--selected-color);
 }
 
 @media all and (orientation: portrait) {

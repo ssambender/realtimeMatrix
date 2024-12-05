@@ -7,6 +7,9 @@ var color = tinycolor('#FFD100');
 var update;
 
 $(document).ready(function() {
+    const currentHost = window.location.host;
+    $('.window h1').text(`Connected to ${currentHost}`);
+
     var picker = $('#custom');
     var palette = $('#palette');
 
@@ -62,6 +65,7 @@ $(document).ready(function() {
         md = false; // Reset dragging state
 
         color = tinycolor($(this).val());
+        document.documentElement.style.setProperty('--selected-color', color);
     });
 
     // Palette selection
@@ -158,18 +162,19 @@ $(document).ready(function() {
 
     function lighten(obj) {
         var c = tinycolor($(obj).css('background-color'));
-        c.lighten(5);
+        c.lighten(.5);
         update_pixel(obj, c);
     }
 
     function darken(obj) {
         var c = tinycolor($(obj).css('background-color'));
-        c.darken(5);
+        c.darken(.5);
         update_pixel(obj, c);
     }
 
     function pick(obj) {
         color = tinycolor($(obj).css('background-color'));
+        document.documentElement.style.setProperty('--selected-color', color);
         picker.val(color.toHexString());
     }
 
